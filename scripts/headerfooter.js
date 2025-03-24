@@ -1,9 +1,8 @@
 window.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector("header");
     header.innerHTML = `
-        <div>
-            <h1>Clerick Barrion's Crazy Bat | WEB215</h1>
-        </div>
+        <div class="padding">
+        <h1 id="header-h1">Clerick Barrion's Crazy Bat | WEB215</h1>
         <small><i></i></small>
         <nav>
             <ul>
@@ -12,9 +11,11 @@ window.addEventListener("DOMContentLoaded", () => {
                 <li><a href="contract.html">Contract</a></li>
             </ul>
         </nav>
+        </div>
     `;
     const footer = document.querySelector("footer");
     footer.innerHTML = `
+        <div class="padding">
         <ul>
             <li><a href="https://github.com/clerickbarrion" target="_blank">GitHub</a></li>
             <li><a href="https://clerickbarrion.github.io" target="_blank">GitHub.io</a></li>
@@ -26,5 +27,6 @@ window.addEventListener("DOMContentLoaded", () => {
         </ul>
         <br>
         <p>Website designed by Clerick Barrion</p>
+        </div>
     `;
 });

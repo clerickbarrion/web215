@@ -73,7 +73,7 @@ header,footer {
   color: beige;
 }
 
-header div {
+#header-h1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,17 +96,35 @@ nav ul, footer ul {
   width: 100%;
 }
 
-footer ul li, nav ul li {
+footer ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav ul li {
   width:14.28571429%;
   min-width:fit-content;
   list-style-type: none;
   padding: 0.2rem;
-  display: inline-block;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li{
+  width: fit-content;
+  min-width:fit-content;
+  list-style-type: none;
+  padding: 0.2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 footer ul li a, nav ul li a {
   display: block;
   color: beige;
+  width:fit-content;
   /* border: solid beige; */
 }
 
@@ -126,7 +144,6 @@ figure {
 }
 
 figure img {
-  width: 20%;
   height: auto;
 }
 
@@ -251,4 +268,8 @@ margin:auto;
 
 #intro-form #funny {
   width: 15rem;
+}
+
+.padding {
+  padding: 1rem;
 }
