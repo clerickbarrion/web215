@@ -70,7 +70,7 @@ article {
 
 header,footer {
   background-color: #757C86;
-  color: beige;
+  color: white;
 }
 
 #header-h1 {
@@ -123,7 +123,7 @@ footer ul li{
 
 footer ul li a, nav ul li a {
   display: block;
-  color: beige;
+  color: white;
   width:fit-content;
   /* border: solid beige; */
 }
