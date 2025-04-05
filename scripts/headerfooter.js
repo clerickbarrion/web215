@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 <li><a href="./">Home</a></li>
                 <li><a href="introduction.html">Introduction</a></li>
                 <li><a href="contract.html">Contract</a></li>
+                <li><a href="https://mern-tutorial-7srg.onrender.com/">MERN Tutorial</a></li>
             </ul>
         </nav>
         </div>
