@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 html, body{
   height: 100%;
-  width: 90%;
+  width: 99.9%;
   margin: auto;
 }
 
@@ -43,21 +47,22 @@ main {
   text-align: left;
   background-color: #5d626a;
   padding: 0.5rem 4rem;
+  min-height: 58vh;
 }
 
 main ul {
   margin: 0.3rem 1rem;
 }
 
-#form {
+form {
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-  margin: auto auto 1rem auto;
+  margin: auto;
 }
 
-#form article section {
+form article section {
   display: flex;
   flex-direction: column;
   margin: 0.5rem;
@@ -82,6 +87,7 @@ header,footer {
 
 p {
   margin: 0.3rem 1rem;
+  font-weight: initial
 }
 
 footer ul, nav ul {
@@ -91,27 +97,12 @@ footer ul, nav ul {
 
 nav ul, footer ul {
   display:flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap:wrap;
   width: 100%;
 }
 
-footer ul {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-nav ul li {
-  width:14.28571429%;
-  min-width:fit-content;
-  list-style-type: none;
-  padding: 0.2rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
-
-footer ul li{
+nav ul li, footer ul li {
   width: fit-content;
   min-width:fit-content;
   list-style-type: none;
@@ -119,6 +110,7 @@ footer ul li{
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 footer ul li a, nav ul li a {
@@ -136,7 +128,6 @@ footer ul li a:first-child, nav ul li a:first-child {
 
 a {
   text-decoration: none;
-  /* color: #8B0000; */
   color:lightblue;
   font-weight: bold;
 }
@@ -153,125 +144,241 @@ figcaption {
   font-style: italic;
 }
 
-#montserrat {
-  font-family: Montserrat, Arial, sans-serif;
-  font-weight: bold;
-}
-
-#dark-red{
-  color: #8B0000;
-}
-
-#dark-brown{
-  color: #553c2b
-}
-
-#brown{
-  color: #8F5635;
-}
-
-#light-brown{
-  width:fit-content;
-  background-color: #004080;
-  color: #E8C8A9;
-}
-
-#light-brown::marker{
-  color: #004080;
-}
-
-#beige{
-  color: beige;
-}
-
-#greeting {
-  text-align: center;
-}
-
-form {
-  margin-top: 1rem;
-  width:100%;
+#userList, #movieList {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-input[type="submit"] {
+#userList li, #movieList li, #reviewList li {
+  list-style-type: none;
+}
+
+.userFigure {
+  background-color: #40464C;
+  color:white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 10vw;
+}
+
+.userFigure:hover {
+  cursor: pointer;
+}
+
+.userFigure img {
+  width: 100%;
+}
+
+.userFigure figcaption {
+  font-style: normal;
+  text-overflow: ellipsis;
+}
+
+.movieFigure {
+  background-color: #40464C;
+  color:white;
+  padding: 1rem;
+  box-shadow: rgb(51, 51, 51) 5px 0px 15px, rgb(51, 51, 51) -5px 0px 15px;
+  width: 10vw;
+}
+
+.movieFigure figcaption {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  
+}
+
+.movieFigure img {
+  width: 100%;
+  height: 100%;
+}
+
+.asideFrame .movieFigure {
+  width: 10vw;
+}
+
+.movieFigure:hover {
+  cursor: pointer;
+}
+
+input[type="submit"], button {
   font-family: 'Roboto Serif','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #8F5635;
-  color:beige;
+  background-color: #40464C;
+  color: white;
   padding: 0.3rem;
+  font-size: 1.3rem;
   cursor: pointer;
   display: inline-block;
-  width:fit-content;
-  margin: 1rem auto
+  width: fit-content;
+  min-width: 7rem;
+  margin: 1rem auto;
+  border: 2px solid black;
 }
 
 i {
   margin-left: 1rem;
 }
 
-button {
-  font-family: 'Roboto Serif','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  align-self: center;
-  background-color: #8F5635;
-  color: beige;
-  padding: 0.3rem;
-  cursor: pointer;
-}
-
-#favicon {
-  width: 5rem;
-  height: 5rem;
-  margin-left: 1rem;
-}
-
-#logo {
-  width: 5rem;
-  height: 5rem;
-}
-
-#fizzbuzzoutput {
-margin:auto;
-} 
-
-#middle-initial {
-  width: 1rem;
-}
-
-#intro-form {
-  display: flex;
-  flex-direction: column;
-}
-
-#intro-form input {
-  width: fit-content;
-  font-family: 'Roboto Serif','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: medium;
-}
-
-#intro-form textarea {
-  width: 50%;
-  height: 6rem;
-  font-family: 'Roboto Serif','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: medium;
-}
-
-#intro-form .course{
-  width: 19rem;
-}
-
-#intro-form .reason {
-  width: 29rem;
-}
-
-#courses {
-  margin-top: 0;
-}
-
-#intro-form #funny {
-  width: 15rem;
+.error {
+  color: red;
+  text-align: center;
 }
 
 .padding {
   padding: 1rem;
+}
+
+.search {
+  width: 50%;
+  margin: auto;
+  font-size: 1.3rem;
+  font-family: inherit;
+  
+}
+
+textarea {
+  font-size: 1.3rem;
+  font-family: inherit;
+  height: 10rem;
+}
+
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 1rem auto;
+}
+.pagination div {
+  text-align: center;
+
+}
+
+.asideFrame {
+  flex-direction: row;
+}
+
+.asideFrame figure {
+  float:left;
+  width: fit-content;
+}
+
+.asideFrame button {
+  margin: 0.3rem 1rem;
+}
+.asideFrame > aside > div {
+  display: flex;
+  width: 100%;
+}
+
+.asideFrame aside {
+  width: 100%;
+}
+
+.asideFrame aside div button {
+  width: 50%;
+}
+
+.asideFrame form {
+  margin: 0.3rem 1rem
+}
+
+.asideFrame form button {
+  margin-left:auto;
+  margin-right: 0
+}
+
+.active {
+  color: #40464C;
+  background-color: white;
+  font-weight: normal;
+}
+
+#reviewList{
+  padding: 0;
+}
+
+.review {
+  background-color: #40464C;
+  color: white;
+  width: 100%;
+  margin: 1rem auto;
+  display:flex;
+}
+
+.review img {
+  width: 5vw;
+  min-width: 5vw;
+  height: 5.5vw;
+  min-height: 5.5vw;
+}
+
+.review div {
+  display: flex;
+  flex-direction: column;  
+  width: 100%;
+}
+
+.reviewButtons {
+  display: block !important;
+  width: 100%;
+  text-align: right;
+}
+.reviewButtons button {
+  background-color: white;
+  color: #40464C;
+  width:fit-content !important;
+}
+
+.top {
+  flex-direction: row !important;
+}
+
+
+.modalContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: #40464C;
+  padding:  4rem 0rem;
+  width: 50%;
+  margin: 0 !important;
+}
+
+.modal textarea {
+  width: 80%;
+  height: 20rem;
+}
+
+.modalButtons {
+  flex-direction: row !important;
+  width: initial !important;
+}
+
+.modalButtons button {
+  background-color: white;
+  color: #40464C;
+  width: fit-content !important;
+  margin: 2rem !important
 }
